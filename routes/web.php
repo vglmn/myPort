@@ -20,10 +20,6 @@ Route::get('/', function () {
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/vue', function () {
-    return view('vue1');
-});
-
 // permet, avec article.blade.php de faire une page qui selon l'URL diras (je suis l'article x)
 /*
 Route::get('article/{n}', function($n) {
@@ -31,6 +27,8 @@ Route::get('article/{n}', function($n) {
 })->where('n', '[0-9]+');
 */
 
+// Pour faire des pages disant "je suis la facture "x" " ou "je suis la page "x" " etc...
+/*
 Route::get('facture/', function () {
     return redirect('/');
 });
@@ -41,9 +39,10 @@ Route::get('facture/{n}', function ($n) {
 
 Route::get('{n}', function($n) {
     return response('Je suis la page ' . $n . ' !', 200);
-})->where('n', '[1-3]');
+})->where('n', '[0-9]+');
 
 Route::get('article/{n}', 'ArticleController@show')->where('n', '[0-9]+');
+*/
 
 Route::get('users', 'UsersController@getInfos');
 Route::post('users', 'UsersController@postInfos');
@@ -56,3 +55,5 @@ Route::post('photo', 'PhotoController@postForm');
 
 Route::get('email', 'EmailController@getForm');
 Route::post('email', ['uses' => 'EmailController@postForm', 'as' => 'storeEmail']);
+
+Route::resource('user', 'UserController');
