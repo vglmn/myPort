@@ -88,6 +88,7 @@
                     <a href="http://127.0.0.1:8000/users">Ma page inutile</a>
                     <a href="http://127.0.0.1:8000/contact">Ma page contact</a>
                     <a href="http://127.0.0.1:8000/photo">Ma page upload photo</a>
+                    <a href="http://127.0.0.1:8000/email">Entrer e-mail en BDD</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>

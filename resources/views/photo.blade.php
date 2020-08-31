@@ -16,6 +16,7 @@
                 </div>
                 {!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
                 {!! Form::close() !!}
+                    <a href="http://127.0.0.1:8000/" class="btn btn-info pull-left">Retourner à l'acceuil</a>
             </div>
         </div>
     </div>
